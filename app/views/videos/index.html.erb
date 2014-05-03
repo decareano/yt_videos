@@ -1,0 +1,42 @@
+<%= javascript_include_tag 'videos' %>
+
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome to the Scrums Page</h1>
+    <p>Choose a Scrum to view.</p>
+    <p>
+      <%= link_to 'List of scrums!', new_video_path, class: 'btn btn-primary btn-lg' %>
+    </p>
+  </div>
+</div>
+
+<div class="col-md-7 col-sm-7">
+
+  <iframe id="ytplayer" type="text/html" width="250" height="250" src="//www.youtube.com/embed/<%= videos %>" frameborder="0"></iframe>
+</div>
+
+
+
+<!--<div id="player-wrapper"></div>-->
+<!--
+    <!--<iframe width="250" height="250" src="//www.youtube.com/embed/ frameborder="14" allowfullscreen></iframe>-->
+
+<div class="row">
+  <div class="col-md-5 col-sm-5">
+    <h4>Programming sessions</h4>
+    <table class="table table-bordered table-striped table-hover table-condensed">
+      <% @videos.each do |video| %>
+          <tr>
+            <td><%= video_link(video) %></td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+
