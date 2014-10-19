@@ -16,3 +16,4 @@
 //= require jquery.bind_with_delay
 //= require yt_player
 //= require videos
+//= require_directory ./WSO

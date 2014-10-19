@@ -11,18 +11,12 @@
   </div>
 </div>
 
-<div class="col-md-7 col-sm-7">
-
-  <iframe id="ytplayer" type="text/html" width="250" height="250" src="//www.youtube.com/embed/<%= @videos.first %>" frameborder="0"></iframe>
-</div>
-
-
-
-<!--<div id="player-wrapper"></div>-->
-<!--
-    <!--<iframe width="250" height="250" src="//www.youtube.com/embed/ frameborder="14" allowfullscreen></iframe>-->
 
 <div class="row">
+  <div class="col-md-7 col-sm-7">
+    <td><h4 id="video_contents"><%= @videos.first['content'] %></h4></td>
+    <iframe id="ytplayer" type="text/html" width="250" height="250" src="//www.youtube.com/embed/<%= @videos.last %>" frameborder="0"></iframe>
+  </div>
   <div class="col-md-5 col-sm-5">
     <h4>Programming sessions</h4>
     <table class="table table-bordered table-striped table-hover table-condensed">

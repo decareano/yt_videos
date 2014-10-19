@@ -1,9 +1,24 @@
-YtVideos::Application.routes.draw do
+require 'recaptcha/configuration'
+
+
+#YtVideos::Application.routes.draw do
+ # get "users/new"
+
+  #get "users/create"
+
+ # get "home/show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  resources :videos, only: [:index, :new, :create]
-  root to: 'videos#index'
+ # resources :videos, only: [:index, :new, :create]
+  #root to: 'videos#index'
 
+  ReCAPTCHAExample::Application.routes.draw do
+      resource :home, only: [:show], controller: :home
+        resource  :users, only: [:new, :create]
+          root to: "home#show"
+  end
+  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -57,6 +72,6 @@ YtVideos::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-end
+
 
 

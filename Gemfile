@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
-gem 'debugger'
+#gem 'debugger'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'bootstrap-sass', '~> 3.1.1.0'
@@ -10,12 +10,28 @@ gem 'uglifier', '>= 1.0.3'
 gem 'jquery-rails'
 gem 'sqlite3'
 gem 'rspec-rails'
+gem 'vcr'
+gem 'fakeweb'
+gem 'recaptcha', '~> 0.3.5'
+gem 'bcrypt-ruby',  '~>3.0.0'
+gem 'strong_parameters'
+
+
 
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
 end
+
+group :development, :test do
+  gem "minitest"
+  gem "minitest-reporters"
+  gem 'jasmine'
+  gem 'jasmine-jquery-rails'
+end
+
+
 
 
 
